@@ -20,22 +20,16 @@ html {
   font-size: 100%;
 }
 
-.container {
-  height: 100vh;
-  background-image: url("../images/main-bg.jpg"), linear-gradient(limegreen, orangered);
-  background-size: cover;
-  background-position: center;
-  background-color: deepskyblue;
-  background-blend-mode: hard-light;
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
 }
 
 /* ヘッダー
 ------------------------------------- */
 
 header {
-  height: 100px;
-  width: 90%;
-  margin: 0 auto;
+  height: 80px;
   display: flex;
   justify-content: space-between;
 }
@@ -47,66 +41,88 @@ header {
 
 .nav {
   width: 200px;
+  margin-top: 20px;
 }
 
 .nav ul {
   width: 100%;
   display: flex;
   gap: 10px;
-  margin-top: 20px;
 }
 
 .nav a:hover {
   color: deepskyblue;
-} 
+}
+
+@media (max-width: 600px) {
+  
+  header {
+    height: 120px;
+    flex-direction: column;
+  }
+
+  .logo,
+  .nav {
+    margin: 15px auto 0;
+  }
+}
 
 /* ホーム
 ------------------------------------- */
 
-#main {
+#home {
+  height: 100vh;
+  background-image: url("../images/main-bg.jpg"), linear-gradient(limegreen, orangered);
+  background-size: cover;
+  background-position: center;
+  background-color: deepskyblue;
+  background-blend-mode: hard-light;
+}
+
+#home-content {
   height: 500px;
   width: 700px;
   padding-top: 100px;
   margin: 0 auto;
 }
 
-.sec-title,
-.sec-text,
+.title,
+.text,
 .btn {
   margin: 0 auto;
   text-align: center;
 }
 
-.sec-title,
-.sec-text {
+.title,
+.text {
   margin-bottom: 15px;
 }
 
-.sec-title {
+.title {
   width: 670px;
   font-family: Philosopher, serif;
   font-size: 4rem;
   line-height: 1;
 }
 
-.sec-text {
+.text {
   width: 620px;
 }
 
-@media (max-width: 768px) {
-  #main {
+@media (max-width: 600px) {
+  #home-content {
     height: 400px;
     width: 375px;
     padding-top: 50px;
   }
 
-  .sec-title {
+  .title {
     width: 350px;
     font-size: 2.5rem;
     line-height: 1.2;
   }
   
-  .sec-text {
+  .text {
     width: 320px;
   } 
 }
@@ -122,4 +138,161 @@ header {
 
 .btn:hover {
   background-color: cornflowerblue;
+}
+
+/* ニュース
+------------------------------------- */
+
+#news {
+  height: 50vh;
+  background-image: url("../images/news-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#news-title {
+  height: 100px;
+  margin-top: 30px;
+}
+
+#news-contents {
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+  margin-top: 25px;
+}
+
+/* 記事
+------------------------------------- */
+
+article {
+  height: 850px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+#post-info {
+  display: flex;
+  gap: 10px;
+}
+
+#post-date {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: deepskyblue;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#post-date p {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 2;
+}
+
+#post-date p:nth-child(1) {
+  font-size: 1.25rem;
+}
+
+#post-date p:nth-child(2) {
+  border-top: 1px solid white;
+}
+
+#post-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25%;
+}
+
+#post-title h2,
+#post-title p {
+  height: 25%;
+}
+
+#post-title h2 {
+  font-weight: normal;
+}
+
+#post-img {
+  width: 100%;
+}
+
+#post-text p {
+  margin-top: 20px;
+}
+
+#post-text p:first-child {
+  margin-top: 0px;
+}
+
+@media (max-width: 600px) {
+  #post-title h2 {
+    font-size: 1.125rem;
+  }
+
+  #post-title p {
+    font-size: 0.75rem;
+  }
+}
+
+/* サイドバー
+------------------------------------- */
+
+aside {
+  height: 450px;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.sub-title,
+.sub-text {
+  padding: 10px 5px;
+}
+
+.sub-title {
+  border-bottom: 2px solid deepskyblue;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.sub-menu li {
+  border-bottom: 1px solid antiquewhite;
+  line-height: 2;
+}
+
+.sub-menu a {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  #news-contents {
+    flex-direction: column;
+  }
+
+  article,
+  aside {
+    width: 100%;
+  }
+}
+
+/* フッター
+------------------------------------- */
+
+footer {
+  height: 50px;
+  background-color: saddlebrown;
+  text-align: center;
+}
+
+small {
+  line-height: 50px;
 }
