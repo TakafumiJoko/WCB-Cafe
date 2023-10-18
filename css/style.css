@@ -167,10 +167,11 @@ header {
 
 article {
   height: 850px;
-  width: 70%;
+  width: 65%;
   display: flex;
   flex-direction: column;
   gap: 5%;
+  order: 2;
 }
 
 #post-info {
@@ -205,9 +206,10 @@ article {
 }
 
 #post-title {
+  height: 150%;
+  width: 70%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 25%;
 }
 
@@ -232,25 +234,16 @@ article {
   margin-top: 0px;
 }
 
-@media (max-width: 600px) {
-  #post-title h2 {
-    font-size: 1.125rem;
-  }
-
-  #post-title p {
-    font-size: 0.75rem;
-  }
-}
-
 /* サイドバー
 ------------------------------------- */
 
 aside {
   height: 450px;
-  width: 25%;
+  width: 15%;
   display: flex;
   flex-direction: column;
   gap: 5%;
+  order: 3;
 }
 
 .sub-title,
@@ -273,14 +266,32 @@ aside {
   display: block;
 }
 
+/* 広告
+------------------------------------- */
+.ad {
+  height: 500px;
+  width: 10%;
+  order: 1;
+}
+
+.ad img {
+  width: 100%;
+}
+
 @media (max-width: 600px) {
   #news-contents {
     flex-direction: column;
   }
 
   article,
-  aside {
+  aside,
+  .ad {
     width: 100%;
+  }
+
+  .ad {
+    height: 2400px;
+    order: 4;
   }
 }
 
