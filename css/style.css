@@ -110,7 +110,7 @@ header {
 }
 
 @media (max-width: 600px) {
-  #home-content {
+  #home-title {
     height: 400px;
     width: 375px;
     padding-top: 50px;
@@ -299,6 +299,44 @@ aside div:last-child {
   .ad {
     order: 4;
   }
+}
+
+/* メニュー
+------------------------------------- */
+
+#menu {
+  height: 100vh;
+  background-image: url("../images/menu-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#menu-title {
+  width: 700px;
+  padding-top: 100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  #menu-title {
+    height: 400px;
+    width: 375px;
+    padding-top: 50px;
+  }
+}
+
+/* パネル
+------------------------------------- */
+
+#menu-contents {
+  margin: 50px auto;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.menu-content img {
+  width: 100%; 
 }
 
 /* フッター
