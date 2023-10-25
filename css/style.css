@@ -479,11 +479,10 @@ aside div:last-child {
   border-bottom: 3px solid deepskyblue;
 }
 
-.sns-item iframe,
-.sns-item a {
+.sns-item iframe {
   margin-top: 30px;
   width: 100%;
-  height: 500px;
+  height: 500px!important;
 }
 
 .sns-item a {
